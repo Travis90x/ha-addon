@@ -20,7 +20,7 @@ Delete old container
 
 1. `git clone https://github.com/Travis90x/ha-addon.git`
 2. `cd ha-addon/eWeLink_Smart_Home/`
-3. `docker build . -t ewelink_smart_home`
+3. ` docker buildx build --platform linux/arm/v7 -t ewelink_smart_home:armv7 .`
 4. Run the code below. Replace `yourHomeAssistantUrl` with your current Home Assisant URL.
 
 ```
@@ -31,7 +31,7 @@ docker run -d \
     -e SUPERVISOR_TOKEN=yourHomeAssitantLongLivedAccessToken \
     -v ./volume:/data \
     --name ewelink_smart_home \
-    ewelink_smart_home
+    ewelink_smart_home:armv7
 ```
 
 -   Example:
@@ -44,7 +44,7 @@ docker run -d \
   -e SUPERVISOR_TOKEN=eyJ~iJ9.eyJ~jF9.CkQ~Lho \
   -v ./volume:/data \
   --name ewelink_smart_home \
-  ewelink_smart_home
+  ewelink_smart_home:armv7
 ```
 
 5. Access port `3000`.
