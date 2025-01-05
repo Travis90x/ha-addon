@@ -3,7 +3,7 @@
     "version": "1.4.3",
     "slug": "ewelink_smart_home_slug",
     "description": "connect eWeLink with home-assistant",
-    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "arch": ["armhf", "armv7", "armv7l", "aarch64", "amd64", "i386"],
     "startup": "application",
     "boot": "auto",
     "url": "https://www.facebook.com/ewelink.support",
